@@ -1,0 +1,15 @@
+version: 1
+os: ubuntu
+phases:
+  install:
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run build
+artifacts:
+  baseDirectory: dist
+  files:
+    - '**/*'
+static:
+  publicDirectory: dist
