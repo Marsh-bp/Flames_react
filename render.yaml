@@ -4,11 +4,11 @@ services:
     env: node
     buildCommand: npm run build
     startCommand: npm start
-    build:
-      env:
-        - NODE_ENV=production
     plan: free
     routes:
       - type: rewrite
-        source: /*  # This wildcard pattern matches all paths
+        source: /*
         destination: /index.html
+envVars:
+  - key: NODE_ENV
+    value: production
