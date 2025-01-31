@@ -9,6 +9,6 @@ services:
       - type: rewrite
         source: /*
         destination: /index.html
-envVars:
+env:
   - key: NODE_ENV
     value: production
